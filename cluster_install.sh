@@ -15,7 +15,7 @@ mkdir -p kubespray/inventory
 cp -rfp kubespray_inventory kubespray/inventory/mycluster
 
 export ANSIBLE_HOST_KEY_CHECKING=False
-ansible-playbook -i kubespray/inventory/mycluster/hosts.ini --become wait-for-server-to-start.yml
+#ansible-playbook -i kubespray/inventory/mycluster/hosts.ini --become wait-for-server-to-start.yml
 
 cd kubespray
 ansible-playbook -i inventory/mycluster/hosts.ini --become cluster.yml
