@@ -11,7 +11,6 @@ bash generate_etc_hosts.sh > ../kubespray_inventory/etc-hosts
 
 cd ../
 rm -rf kubespray/inventory/mycluster
-mkdir -p kubespray/inventory/artifacts
 cp -rfp kubespray_inventory kubespray/inventory/mycluster
 
 export ANSIBLE_HOST_KEY_CHECKING=False
@@ -24,6 +23,8 @@ cd ../terraform
 MASTER_1_PRIVATE_IP=$(terraform output -json instance_group_masters_private_ips | jq -j ".[0]")
 MASTER_1_PUBLIC_IP=$(terraform output -json instance_group_masters_public_ips | jq -j ".[0]")
 sed -i -- "s/$MASTER_1_PRIVATE_IP/$MASTER_1_PUBLIC_IP/g" ../kubespray/inventory/mycluster/artifacts/admin.conf
+
+cat ../kubespray/inventory/mycluster/artifacts/admin.conf
 
 # Создаём конфигурационный каталог для управления кластером и копируем в него конфиг-файл:
 mkdir -p ~/.kube 

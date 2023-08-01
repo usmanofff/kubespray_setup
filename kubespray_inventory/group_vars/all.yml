@@ -25,8 +25,8 @@ bin_dir: /usr/local/bin
 # loadbalancer_apiserver_localhost: true
 # valid options are "nginx" or "haproxy"
 # loadbalancer_apiserver_type: nginx # valid values "nginx" or "haproxy"
-loadbalancer_apiserver_localhost: true
-loadbalancer_apiserver_type: nginx
+#loadbalancer_apiserver_localhost: true
+#loadbalancer_apiserver_type: nginx
 
 ## Local loadbalancer should use this port
 ## And must be set port 6443
