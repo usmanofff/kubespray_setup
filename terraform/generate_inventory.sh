@@ -13,14 +13,14 @@ terraform output -json instance_group_masters_private_ips | jq -j ".[$num-1]"
 printf "   etcd_member_name=etcd-$num\n"
 done
 
-for num in 1 2
-do
-printf "ingress-$num   ansible_host="
-terraform output -json instance_group_ingresses_public_ips | jq -j ".[$num-1]"
-printf "   ip="
-terraform output -json instance_group_ingresses_private_ips | jq -j ".[$num-1]"
-printf "\n"
-done
+#for num in 1 2
+#do
+#printf "ingress-$num   ansible_host="
+#terraform output -json instance_group_ingresses_public_ips | jq -j ".[$num-1]"
+#printf "   ip="
+#terraform output -json instance_group_ingresses_private_ips | jq -j ".[$num-1]"
+#printf "\n"
+#done
 
 for num in 1 2
 do

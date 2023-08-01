@@ -113,7 +113,9 @@ resource "yandex_compute_instance_group" "k8s-masters" {
     network_interface {
       network_id = yandex_vpc_network.k8s-network.id
       subnet_ids = [
-        yandex_vpc_subnet.k8s-subnet-1.id
+        yandex_vpc_subnet.k8s-subnet-1.id,
+        yandex_vpc_subnet.k8s-subnet-2.id,
+        yandex_vpc_subnet.k8s-subnet-3.id,
       
       ]
       # Флаг nat true указывает что виртуалкам будет предоставлен публичный IP адрес.
