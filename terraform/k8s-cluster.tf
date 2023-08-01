@@ -98,7 +98,7 @@ resource "yandex_compute_instance_group" "k8s-masters" {
     resources {
       cores  = 2
       memory = 2
-      core_fraction = 20 # Базовый уровень производительности vCPU. https://cloud.yandex.ru/docs/compute/concepts/performance-levels
+      core_fraction = 100 # Базовый уровень производительности vCPU. https://cloud.yandex.ru/docs/compute/concepts/performance-levels
     }
 
     # Загрузочный диск в виртуальных машинах в Instance Groups
@@ -173,7 +173,7 @@ resource "yandex_compute_instance_group" "k8s-workers" {
     resources {
       cores  = 2
       memory = 2
-      core_fraction = 20
+      core_fraction = 100
     }
 
     boot_disk {
