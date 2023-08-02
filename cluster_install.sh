@@ -17,7 +17,7 @@ export ANSIBLE_HOST_KEY_CHECKING=False
 #ansible-playbook -i kubespray/inventory/mycluster/hosts.ini --become wait-for-server-to-start.yml
 sleep 85
 cd kubespray
-ansible-playbook -i inventory/mycluster/hosts.ini --become cluster.yml
+ansible-playbook -i inventory/mycluster/hosts.ini --become --become-user=root cluster.yml
 
 cd ../terraform
 MASTER_1_PRIVATE_IP=$(terraform output -json instance_group_masters_private_ips | jq -j ".[0]")
