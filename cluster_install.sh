@@ -24,7 +24,6 @@ MASTER_1_PRIVATE_IP=$(terraform output -json instance_group_masters_private_ips 
 MASTER_1_PUBLIC_IP=$(terraform output -json instance_group_masters_public_ips | jq -j ".[0]")
 sed -i -- "s/$MASTER_1_PRIVATE_IP/$MASTER_1_PUBLIC_IP/g" ../kubespray/inventory/mycluster/artifacts/admin.conf
 
-cat ../kubespray/inventory/mycluster/artifacts/admin.conf
 
 # Создаём конфигурационный каталог для управления кластером и копируем в него конфиг-файл:
 mkdir -p ~/.kube 

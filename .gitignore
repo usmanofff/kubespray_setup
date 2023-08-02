@@ -9,3 +9,4 @@
 /terraform/*.tfstate
 /terraform/*.tfstate.*
 /manifests
+/terraform/private.variables.tf

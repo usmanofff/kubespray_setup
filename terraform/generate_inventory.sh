@@ -4,7 +4,7 @@ set -e
 
 printf "[all]\n"
 
-for num in 1 2 3
+for num in 1 
 do
 printf "master-$num   ansible_host="
 terraform output -json instance_group_masters_public_ips | jq -j ".[$num-1]"
@@ -22,7 +22,7 @@ done
 #printf "\n"
 #done
 
-for num in 1 2
+for num in 1 
 do
 printf "worker-$num   ansible_host="
 terraform output -json instance_group_workers_public_ips | jq -j ".[$num-1]"
@@ -40,29 +40,25 @@ printf "'\n\n"
 cat << EOF
 [kube-master]
 master-1
-master-2
-master-3
+
 
 [etcd]
 master-1
-master-2
-master-3
+
 
 [kube-node]
 worker-1
-worker-2
-ingress-1
-ingress-2
+
 
 [kube-worker]
 worker-1
-worker-2
+
 
 [kube-ingress]
 ingress-1
-ingress-2
+
 
 [k8s-cluster:children]
 kube-master
-kube-node
+
 EOF
