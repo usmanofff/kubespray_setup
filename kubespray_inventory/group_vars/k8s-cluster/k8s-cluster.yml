@@ -20,7 +20,7 @@ kube_users_dir: "{{ kube_config_dir }}/users"
 kube_api_anonymous_auth: true
 
 ## Change this to use another Kubernetes version, e.g. a current beta release
-kube_version: v1.25.0
+kube_version: v1.21.0 
 
 # kubernetes image repo define
 kube_image_repo: "k8s.gcr.io"
@@ -231,7 +231,7 @@ podsecuritypolicy_enabled: false
 # Make a copy of kubeconfig on the host that runs Ansible in {{ inventory_dir }}/artifacts
 kubeconfig_localhost: true
 # Download kubectl onto the host that runs Ansible in {{ bin_dir }}
-kubectl_localhost: true
+# kubectl_localhost: false
 
 # A comma separated list of levels of node allocatable enforcement to be enforced by kubelet.
 # Acceptable options are 'pods', 'system-reserved', 'kube-reserved' and ''. Default is "".
