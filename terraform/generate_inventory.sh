@@ -55,7 +55,7 @@ worker-1
 
 
 [kube-ingress]
-ingress-1
+worker-1
 
 
 [k8s-cluster:children]
