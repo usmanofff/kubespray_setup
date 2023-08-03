@@ -104,7 +104,7 @@ resource "yandex_compute_instance_group" "k8s-masters" {
     # Загрузочный диск в виртуальных машинах в Instance Groups
     boot_disk {
       initialize_params {
-        image_id = "fd8s1rt9rlesqptbevhg" # Ubuntu 22.04 LTS
+        image_id = "fd8bkgba66kkf9eenpkb" # Ubuntu 22.04 LTS
         size     = 10
         type     = "network-ssd"
       }
@@ -178,7 +178,7 @@ resource "yandex_compute_instance_group" "k8s-workers" {
 
     boot_disk {
       initialize_params {
-        image_id = "fd8s1rt9rlesqptbevhg" # Ubuntu 22.04 LTS
+        image_id = "fd8bkgba66kkf9eenpkb" # Ubuntu 22.04 LTS
         size     = 10
         type     = "network-hdd"
       }
