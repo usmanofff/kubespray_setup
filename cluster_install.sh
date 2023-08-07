@@ -15,7 +15,7 @@ cp -rfp kubespray_inventory kubespray/inventory/mycluster
 
 export ANSIBLE_HOST_KEY_CHECKING=False
 #ansible-playbook -i kubespray/inventory/mycluster/hosts.ini --become wait-for-server-to-start.yml
-#sleep 85
+sleep 85
 cd kubespray
 ansible-playbook -i inventory/mycluster/hosts.ini --become --diff cluster.yml 
 
