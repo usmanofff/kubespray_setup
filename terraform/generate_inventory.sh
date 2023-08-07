@@ -60,5 +60,6 @@ worker-1
 
 [k8s-cluster:children]
 kube-master
+kube-node
 
 EOF

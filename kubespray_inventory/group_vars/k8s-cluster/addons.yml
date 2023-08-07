@@ -81,7 +81,7 @@ rbd_provisioner_enabled: false
 
 # Nginx ingress controller deployment
 ingress_nginx_enabled: true
-ingress_nginx_host_network: true
+ingress_nginx_host_network: true # режим при которм - внутрь контейнера прокидывается сетевой интерфейс с узла(таким образом доступ в интернет на прямую)
 ingress_publish_status_address: ""
 ingress_nginx_nodeselector:
   node-role.kubernetes.io/ingress: "true"

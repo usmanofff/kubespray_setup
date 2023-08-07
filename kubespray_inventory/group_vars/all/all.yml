@@ -3,7 +3,8 @@
 etcd_data_dir: /var/lib/etcd
 
 ## Experimental kubeadm etcd deployment mode. Available only for new deployment
-etcd_kubeadm_enabled: false
+etcd_kubeadm_enabled: false # Запрещает установку через kubeadm и включает установку классическим способом
+skip_non_kubeadm_warning: true # Не нужно предупреждений ( не хотим ставить kubeadm)
 
 ## Directory where the binaries will be installed
 bin_dir: /usr/local/bin
@@ -40,7 +41,7 @@ loadbalancer_apiserver_healthcheck_port: 8081
 ## for mounting persistent volumes into containers.  These may not be loaded by preinstall kubernetes
 ## processes.  For example, ceph and rbd backed volumes.  Set to true to allow kubelet to load kernel
 ## modules.
-# kubelet_load_modules: false
+kubelet_load_modules: true # можно загружать модули ядра которые ему нужны
 
 ## Upstream dns servers
 # upstream_dns_servers:
@@ -85,7 +86,7 @@ loadbalancer_apiserver_healthcheck_port: 8081
 # ignore_assert_errors: false
 
 ## The read-only port for the Kubelet to serve on with no authentication/authorization. Uncomment to enable.
-# kube_read_only_port: 10255
+kube_read_only_port: 10255 # Для сбора метрик Prometheus (мониторинг)
 
 ## Set true to download and cache container
 # download_container: true

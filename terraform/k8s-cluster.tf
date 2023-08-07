@@ -96,8 +96,8 @@ resource "yandex_compute_instance_group" "k8s-masters" {
 
     # Ресурсы, которые будут выделены для создания виртуальных машин в Instance Groups
     resources {
-      cores  = 2
-      memory = 2
+      cores  = 4
+      memory = 8
       core_fraction = 100 # Базовый уровень производительности vCPU. https://cloud.yandex.ru/docs/compute/concepts/performance-levels
     }
 
@@ -171,8 +171,8 @@ resource "yandex_compute_instance_group" "k8s-workers" {
     name = "worker-{instance.index}"
 
     resources {
-      cores  = 2
-      memory = 2
+      cores  = 4
+      memory = 8
       core_fraction = 100
     }
 
@@ -180,7 +180,7 @@ resource "yandex_compute_instance_group" "k8s-workers" {
       initialize_params {
         image_id = "fd8bkgba66kkf9eenpkb" # Ubuntu 22.04 LTS
         size     = 10
-        type     = "network-hdd"
+        type     = "network-ssd"
       }
     }
 
