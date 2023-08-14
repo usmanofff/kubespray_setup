@@ -21,6 +21,10 @@
 
 ![image](https://github.com/usmanofff/kubespray_setup/assets/74288450/97deceeb-eaae-4dd9-a458-1081e49713e3)
 
+Параметры кластера :
+- master node
+- worker node
+
 
 
 ``` ../cluster_install.su```
