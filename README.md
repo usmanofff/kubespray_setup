@@ -2,11 +2,28 @@
 
 Инструкция была основана на базе видео "Установка кластера Kubernetes с помощью Kubespray" в Youtube.
 
-Код был форкнут из репозитория https://git.cloud-team.ru/lections/kubernetes_setup и добавлен с патчами в репозиторий https://github.com/patsevanton/kubespray_terraform_yandex_cloud
+Код был форкнут из репозитория https://git.cloud-team.ru/lections/kubernetes_setup и добавлен с патчами в репозиторий https://github.com/patsevanton/kubespray_terraform_yandex_c
 
-Самое интересное в этом посте для devops специалистов с опытом это [скрипт](https://git.cloud-team.ru/lections/kubernetes_setup/blob/master/terraform/generate_inventory.sh) для создания ansible inventory файла из terraform структур.
+Запускаем установку кластера с помощью подготовленной конфигурации terraform и ansible.
+
+перед запуском необходимо проверить зависимости для установки kubespray нужной версии.
+
+ansible==7.6.0
+ansible-core==2.14.6
+cryptography==41.0.1
+jinja2==3.1.2
+jmespath==1.0.1
+MarkupSafe==2.1.3
+netaddr==0.8.0
+pbr==5.11.1
+ruamel.yaml==0.17.31
+ruamel.yaml.clib==0.2.7
+
+![image](https://github.com/usmanofff/kubespray_setup/assets/74288450/97deceeb-eaae-4dd9-a458-1081e49713e3)
 
 
+
+``` ../cluster_install.su```
 
 
 
