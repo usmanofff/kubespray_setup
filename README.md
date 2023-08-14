@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 Код был форкнут из репозитория https://git.cloud-team.ru/lections/kubernetes_setup и добавлен с патчами в репозиторий https://github.com/patsevanton/kubespray_terraform_yandex_c
 
-Запускаем установку кластера с помощью подготовленной конфигурации terraform и ansible.
+
 
 Перед установкой кластера необходимо проверить зависимости: kube_version: v1.26.7
 
@@ -23,16 +23,15 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 ![image](https://github.com/usmanofff/kubespray_setup/assets/74288450/97deceeb-eaae-4dd9-a458-1081e49713e3)
 
-Параметры кластера :
-- master node
-- worker node
+Запускаем установку кластера с помощью подготовленной конфигурации terraform и ansible.
 
+``` ./cluster_install.su```
 
+Процесс установки занимает приммерно 20 минут можно попить кофе...
 
-``` ../cluster_install.su```
+По Итогу должны получить :
 
-
-
+![kube_create](https://github.com/usmanofff/kubespray_setup/assets/74288450/1a35cba6-b97b-41e3-a54f-e5bde488d159)
 
 
 
