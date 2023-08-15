@@ -35,7 +35,19 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 ![kube_create](https://github.com/usmanofff/kubespray_setup/assets/74288450/1a35cba6-b97b-41e3-a54f-e5bde488d159)
 
+В качестве сетевого взаимодействия выбран плагин flannel :
 
+- kube_network_plugin: flannel # Хорошо работает до 50 узлов, простой
+
+- flannel_interface_regexp: '192\\.168\\.20\\.\\d{1,3}' ( нужно указать диапозон локальной сети кластера)
+
+- kube_service_addresses: 10.233.0.0/18
+
+- kubeconfig_localhost: true (создание файла для подключение к кластеру)
+
+- docker_storage_options: -s overlay2 # Докер должен запускатся с драйвером overlay2(рекомендуется использовать и он самый быстрый)
+
+- 
 
 
 
