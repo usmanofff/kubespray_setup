@@ -47,7 +47,6 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 - docker_storage_options: -s overlay2 # Докер должен запускатся с драйвером overlay2(рекомендуется использовать и он самый быстрый)
 
-- 
 
 
 
