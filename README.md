@@ -23,7 +23,7 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 ``` ./cluster_install.su```
 
-Процесс установки занимает приммерно 20 минут можно попить кофе...
+Процесс установки занимает примерно 20 минут можно попить кофе...
 
 По Итогу должны получить :
 
@@ -36,13 +36,13 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 - kube_network_plugin: flannel # Хорошо работает до 50 узлов, простой
 
-- flannel_interface_regexp: '192\\.168\\.20\\.\\d{1,3}' ( нужно указать диапозон локальной сети кластера)
+- flannel_interface_regexp: '192\\.168\\.20\\.\\d{1,3}' ( нужно указать диапазон  локальной сети кластера)
 
 - kube_service_addresses: 10.233.0.0/18
 
 - kubeconfig_localhost: true (создание файла для подключение к кластеру)
 
-- docker_storage_options: -s overlay2 # Докер должен запускатся с драйвером overlay2(рекомендуется использовать и он самый быстрый)
+- docker_storage_options: -s overlay2 # Докер должен запускается с драйвером overlay2(рекомендуется использовать и он самый быстрый)
 
 
 
