@@ -4,9 +4,6 @@
 
 https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
-Код был форкнут из репозитория https://git.cloud-team.ru/lections/kubernetes_setup и добавлен с патчами в репозиторий https://github.com/patsevanton/kubespray_terraform_yandex_c
-
-
 Перед установкой кластера необходимо проверить зависимости: kube_version: v1.26.7
 
 - ansible==7.6.0
