@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=WFXlr0bVTAQ
 
 Процесс установки занимает примерно 20 минут можно попить кофе...
 
-По Итогу должны получить :
+Результат :
 
 ![image](https://github.com/usmanofff/kubespray_setup/assets/74288450/64020284-a8fd-4392-854a-9bc75ba1bbdc)
 
